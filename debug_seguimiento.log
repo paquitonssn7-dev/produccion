@@ -1,2 +1,532 @@
-2026-04-30 11:08:24 load_logo: intentando cargar desde: F:\Acomodados\trabajo\PRODUCCION\_internal\Logo.png
-2026-04-30 11:08:24 load_logo: archivo encontrado en F:\Acomodados\trabajo\PRODUCCION\_internal\Logo.png
+2026-05-28 08:13:25 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 08:13:25 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 08:13:25 Actualizador integrado - versión actual: 1.1.3
+2026-05-28 08:13:38 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 08:13:38 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 08:13:38 Actualizador integrado - versión actual: 1.1.4
+2026-05-28 10:08:46 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:08:46 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:08:46 Actualizador integrado - versión actual: 1.1.3
+2026-05-28 10:08:59 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:08:59 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:08:59 Actualizador integrado - versión actual: 1.1.3
+2026-05-28 10:14:15 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:14:15 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:14:28 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:14:28 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-05-28 10:14:28 Actualizador integrado - versión actual: 1.1.3
+2026-06-17 12:23:43 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:23:43 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:23:55 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:23:55 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:24:01 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:24:01 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:24:06 LOGIN_EXITOSO - Usuario: Ing. Carlos Administrador: Ing. Carlos Administrador
+2026-06-17 12:24:06 LOGIN: admin (EXITOSO) - ADMINISTRACIÓN
+2026-06-17 12:24:10 table_has_column('ORDENES', 'ESTADO'): True
+2026-06-17 12:24:10 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-17 12:24:10 table_has_column('ORDENES', 'N_FALLA'): False
+2026-06-17 12:24:10 table_has_column('ORDENES', 'ID_TECNICO'): False
+2026-06-17 12:24:10 table_has_column('ORDENES', 'ID_RECIBIO'): False
+2026-06-17 12:24:10 table_has_column('ORDENES', 'ID_MAQUINA'): True
+2026-06-17 12:24:10 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:11 load_fallas_list: query returned 15 rows
+2026-06-17 12:24:11 load_fallas_list sample 0: (14, 'Bloqueo mecánico', 'Componente bloqueado, máquina no gira')
+2026-06-17 12:24:11 load_fallas_list sample 1: (6, 'Cable pelado', 'Cable eléctrico con aislamiento dañado')
+2026-06-17 12:24:11 load_fallas_list sample 2: (10, 'Controlador PLC fallo', 'PLC no responde a estímulos')
+2026-06-17 12:24:11 load_fallas_list sample 3: (3, 'Correa destensada', 'Correa de transmisión con tensión insuficiente')
+2026-06-17 12:24:11 load_fallas_list sample 4: (8, 'Engranaje roto', 'Engranaje de transmisión fracturado')
+2026-06-17 12:24:11 load_fallas_list: added display='14 - Bloqueo mecánico' -> id=14
+2026-06-17 12:24:11 load_fallas_list: added display='6 - Cable pelado' -> id=6
+2026-06-17 12:24:11 load_fallas_list: added display='10 - Controlador PLC fallo' -> id=10
+2026-06-17 12:24:11 load_fallas_list: added display='3 - Correa destensada' -> id=3
+2026-06-17 12:24:11 load_fallas_list: added display='8 - Engranaje roto' -> id=8
+2026-06-17 12:24:11 load_fallas_list: added display='15 - Fuga de aire comprimido' -> id=15
+2026-06-17 12:24:11 load_fallas_list: added display='5 - Fugas de aceite' -> id=5
+2026-06-17 12:24:11 load_fallas_list: added display='9 - Interruptor defectuoso' -> id=9
+2026-06-17 12:24:11 load_fallas_list: added display='1 - Motor no arranca' -> id=1
+2026-06-17 12:24:11 load_fallas_list: added display='13 - Presión baja' -> id=13
+2026-06-17 12:24:11 load_fallas_list: added display='2 - Rodamiento defectuoso' -> id=2
+2026-06-17 12:24:11 load_fallas_list: added display='4 - Sensor defectuoso' -> id=4
+2026-06-17 12:24:11 load_fallas_list: added display='12 - Sobrecalentamiento' -> id=12
+2026-06-17 12:24:11 load_fallas_list: added display='7 - Válvula dañada' -> id=7
+2026-06-17 12:24:11 load_fallas_list: added display='11 - Vibración excesiva' -> id=11
+2026-06-17 12:24:11 load_fallas_list: cargadas 15 fallas
+2026-06-17 12:24:11 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-17 12:24:11 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-17 12:24:11 table_has_column('ORDENES', 'TURNO'): False
+2026-06-17 12:24:11 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-17 12:24:11 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-17 12:24:11 load_work_orders: sample rows: [('P', 20, datetime.datetime(2026, 6, 17, 9, 28, 58, 747000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '9', 'Bondeado / Laminado', 'Analizador Emisiones', '0001'), ('P', 19, datetime.datetime(2026, 6, 16, 13, 3, 18, 923000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Tintorería', 'Banco Pruebas 1', '0001'), ('P', 18, datetime.datetime(2026, 6, 16, 11, 40, 43, 220000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Almacén de Productos Químicos', 'Bomba Crudos 1', '0001'), ('P', 17, datetime.datetime(2026, 6, 16, 10, 19, 40, 543000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '15', 'Tornos', 'Torno CNC 1', '0001'), ('P', 16, datetime.datetime(2026, 6, 15, 12, 50, 8, 393000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '2', 'Bondeado / Laminado', 'Prensa Estampado 2', '0001')]
+2026-06-17 12:24:11 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-17 12:24:11 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-17 12:24:11 table_has_column('ORDENES', 'TURNO'): False
+2026-06-17 12:24:11 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-17 12:24:11 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-17 12:24:11 load_work_orders: sample rows: [('P', 20, datetime.datetime(2026, 6, 17, 9, 28, 58, 747000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '9', 'Bondeado / Laminado', 'Analizador Emisiones', '0001'), ('P', 19, datetime.datetime(2026, 6, 16, 13, 3, 18, 923000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Tintorería', 'Banco Pruebas 1', '0001'), ('P', 18, datetime.datetime(2026, 6, 16, 11, 40, 43, 220000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Almacén de Productos Químicos', 'Bomba Crudos 1', '0001'), ('P', 17, datetime.datetime(2026, 6, 16, 10, 19, 40, 543000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '15', 'Tornos', 'Torno CNC 1', '0001'), ('P', 16, datetime.datetime(2026, 6, 15, 12, 50, 8, 393000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '2', 'Bondeado / Laminado', 'Prensa Estampado 2', '0001')]
+2026-06-17 12:24:11 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-17 12:24:11 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-17 12:24:11 table_has_column('ORDENES', 'TURNO'): False
+2026-06-17 12:24:11 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-17 12:24:11 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-17 12:24:11 load_work_orders: sample rows: [('P', 20, datetime.datetime(2026, 6, 17, 9, 28, 58, 747000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '9', 'Bondeado / Laminado', 'Analizador Emisiones', '0001'), ('P', 19, datetime.datetime(2026, 6, 16, 13, 3, 18, 923000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Tintorería', 'Banco Pruebas 1', '0001'), ('P', 18, datetime.datetime(2026, 6, 16, 11, 40, 43, 220000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Almacén de Productos Químicos', 'Bomba Crudos 1', '0001'), ('P', 17, datetime.datetime(2026, 6, 16, 10, 19, 40, 543000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '15', 'Tornos', 'Torno CNC 1', '0001'), ('P', 16, datetime.datetime(2026, 6, 15, 12, 50, 8, 393000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '2', 'Bondeado / Laminado', 'Prensa Estampado 2', '0001')]
+2026-06-17 12:24:16 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:16 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:16 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:16 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:16 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:21 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:21 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:21 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:21 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:21 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:26 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-17 12:24:26 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-17 12:24:26 table_has_column('ORDENES', 'TURNO'): False
+2026-06-17 12:24:26 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-17 12:24:26 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-17 12:24:26 load_work_orders: sample rows: [('P', 20, datetime.datetime(2026, 6, 17, 9, 28, 58, 747000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '9', 'Bondeado / Laminado', 'Analizador Emisiones', '0001'), ('P', 19, datetime.datetime(2026, 6, 16, 13, 3, 18, 923000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Tintorería', 'Banco Pruebas 1', '0001'), ('P', 18, datetime.datetime(2026, 6, 16, 11, 40, 43, 220000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '13', 'Almacén de Productos Químicos', 'Bomba Crudos 1', '0001'), ('P', 17, datetime.datetime(2026, 6, 16, 10, 19, 40, 543000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '15', 'Tornos', 'Torno CNC 1', '0001'), ('P', 16, datetime.datetime(2026, 6, 15, 12, 50, 8, 393000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '2', 'Bondeado / Laminado', 'Prensa Estampado 2', '0001')]
+2026-06-17 12:24:26 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:26 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:26 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:26 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:26 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:31 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:31 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:31 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:31 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:31 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:36 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:36 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:36 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:36 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:36 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:41 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:41 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:41 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:41 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:41 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:46 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:46 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:46 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:46 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:46 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:51 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:51 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:51 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:51 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:51 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:57 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:57 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:57 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:24:57 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:24:57 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:25:02 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:25:02 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:25:02 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:25:02 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:25:02 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:25:07 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:25:07 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:25:07 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:25:07 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-17 12:25:07 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-17 12:44:04 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:44:04 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:44:45 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 12:44:45 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 13:03:54 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 13:03:54 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 13:05:26 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 13:05:26 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 13:07:36 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-17 13:07:36 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-18 13:11:42 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-18 13:11:42 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-18 13:11:54 load_logo: intentando cargar desde: F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-18 13:11:54 load_logo: archivo encontrado en F:\Acomodados\APLICACION_OT\PRODUCCION\_internal\Logo.png
+2026-06-18 13:12:00 Intento de login - Usuario bloqueado/inactivo - Usuario: Ing. Carlos Administrador: DESCONOCIDO
+2026-06-18 13:12:00 LOGIN: admin (FALLIDO) - ADMINISTRACIÓN
+2026-06-18 13:12:06 LOGIN_EXITOSO - Usuario: Ing. Alejandra Datos: Ing. Alejandra Datos
+2026-06-18 13:12:06 LOGIN: ad (EXITOSO) - ADMINISTRACIÓN
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ESTADO'): True
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:10 table_has_column('ORDENES', 'N_FALLA'): False
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_TECNICO'): False
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_RECIBIO'): False
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_MAQUINA'): True
+2026-06-18 13:12:10 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:10 get_machines_by_department: id_departamento=1 is_admin=True is_admin_login=False dep_name='ADMINISTRACIÓN'
+2026-06-18 13:12:10 load_fallas_list: query returned 15 rows
+2026-06-18 13:12:10 load_fallas_list sample 0: (14, 'Bloqueo mecánico', 'Componente bloqueado, máquina no gira')
+2026-06-18 13:12:10 load_fallas_list sample 1: (6, 'Cable pelado', 'Cable eléctrico con aislamiento dañado')
+2026-06-18 13:12:10 load_fallas_list sample 2: (10, 'Controlador PLC fallo', 'PLC no responde a estímulos')
+2026-06-18 13:12:10 load_fallas_list sample 3: (3, 'Correa destensada', 'Correa de transmisión con tensión insuficiente')
+2026-06-18 13:12:10 load_fallas_list sample 4: (8, 'Engranaje roto', 'Engranaje de transmisión fracturado')
+2026-06-18 13:12:10 load_fallas_list: added display='14 - Bloqueo mecánico' -> id=14
+2026-06-18 13:12:10 load_fallas_list: added display='6 - Cable pelado' -> id=6
+2026-06-18 13:12:10 load_fallas_list: added display='10 - Controlador PLC fallo' -> id=10
+2026-06-18 13:12:10 load_fallas_list: added display='3 - Correa destensada' -> id=3
+2026-06-18 13:12:10 load_fallas_list: added display='8 - Engranaje roto' -> id=8
+2026-06-18 13:12:10 load_fallas_list: added display='15 - Fuga de aire comprimido' -> id=15
+2026-06-18 13:12:10 load_fallas_list: added display='5 - Fugas de aceite' -> id=5
+2026-06-18 13:12:10 load_fallas_list: added display='9 - Interruptor defectuoso' -> id=9
+2026-06-18 13:12:10 load_fallas_list: added display='1 - Motor no arranca' -> id=1
+2026-06-18 13:12:10 load_fallas_list: added display='13 - Presión baja' -> id=13
+2026-06-18 13:12:10 load_fallas_list: added display='2 - Rodamiento defectuoso' -> id=2
+2026-06-18 13:12:10 load_fallas_list: added display='4 - Sensor defectuoso' -> id=4
+2026-06-18 13:12:10 load_fallas_list: added display='12 - Sobrecalentamiento' -> id=12
+2026-06-18 13:12:10 load_fallas_list: added display='7 - Válvula dañada' -> id=7
+2026-06-18 13:12:10 load_fallas_list: added display='11 - Vibración excesiva' -> id=11
+2026-06-18 13:12:10 load_fallas_list: cargadas 15 fallas
+2026-06-18 13:12:10 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:10 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:10 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:10 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:10 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
+2026-06-18 13:12:10 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:10 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:10 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:10 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:10 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
+2026-06-18 13:12:10 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:10 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:11 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:11 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:11 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:11 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
+2026-06-18 13:12:16 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:16 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:16 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:16 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:16 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:21 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:21 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:21 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:21 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:21 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:25 table_has_column('usuarios', 'nivel'): True
+2026-06-18 13:12:26 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:26 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:26 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:26 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:26 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:26 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
+2026-06-18 13:12:26 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:26 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:26 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:26 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:26 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:29 table_has_column('usuarios', 'nivel'): True
+2026-06-18 13:12:29 Editar usuario: admin (ID ADMIN001): Ing. Alejandra Datos
+2026-06-18 13:12:31 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:31 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:31 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:31 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:31 table_has_column('ORDENES', 'OTRO_TIPO'): False
+2026-06-18 13:12:31 LOGOUT - Cerrar sesión: Ing. Alejandra Datos
+2026-06-18 13:12:34 LOGIN_EXITOSO - Usuario: Ing. Carlos Administrador: Ing. Carlos Administrador
+2026-06-18 13:12:34 LOGIN: admin (EXITOSO) - ADMINISTRACIÓN
+2026-06-18 13:12:38 table_has_column('ORDENES', 'ESTADO'): True
+2026-06-18 13:12:38 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:38 table_has_column('ORDENES', 'N_FALLA'): False
+2026-06-18 13:12:38 table_has_column('ORDENES', 'ID_TECNICO'): False
+2026-06-18 13:12:38 table_has_column('ORDENES', 'ID_RECIBIO'): False
+2026-06-18 13:12:38 table_has_column('ORDENES', 'ID_MAQUINA'): True
+2026-06-18 13:12:38 table_has_column('ORDENES', 'FECHA_SOLICITUD'): True
+2026-06-18 13:12:38 get_machines_by_department: id_departamento=1 is_admin=True is_admin_login=True dep_name='ADMINISTRACIÓN'
+2026-06-18 13:12:39 load_fallas_list: query returned 15 rows
+2026-06-18 13:12:39 load_fallas_list sample 0: (14, 'Bloqueo mecánico', 'Componente bloqueado, máquina no gira')
+2026-06-18 13:12:39 load_fallas_list sample 1: (6, 'Cable pelado', 'Cable eléctrico con aislamiento dañado')
+2026-06-18 13:12:39 load_fallas_list sample 2: (10, 'Controlador PLC fallo', 'PLC no responde a estímulos')
+2026-06-18 13:12:39 load_fallas_list sample 3: (3, 'Correa destensada', 'Correa de transmisión con tensión insuficiente')
+2026-06-18 13:12:39 load_fallas_list sample 4: (8, 'Engranaje roto', 'Engranaje de transmisión fracturado')
+2026-06-18 13:12:39 load_fallas_list: added display='14 - Bloqueo mecánico' -> id=14
+2026-06-18 13:12:39 load_fallas_list: added display='6 - Cable pelado' -> id=6
+2026-06-18 13:12:39 load_fallas_list: added display='10 - Controlador PLC fallo' -> id=10
+2026-06-18 13:12:39 load_fallas_list: added display='3 - Correa destensada' -> id=3
+2026-06-18 13:12:39 load_fallas_list: added display='8 - Engranaje roto' -> id=8
+2026-06-18 13:12:39 load_fallas_list: added display='15 - Fuga de aire comprimido' -> id=15
+2026-06-18 13:12:39 load_fallas_list: added display='5 - Fugas de aceite' -> id=5
+2026-06-18 13:12:39 load_fallas_list: added display='9 - Interruptor defectuoso' -> id=9
+2026-06-18 13:12:39 load_fallas_list: added display='1 - Motor no arranca' -> id=1
+2026-06-18 13:12:39 load_fallas_list: added display='13 - Presión baja' -> id=13
+2026-06-18 13:12:39 load_fallas_list: added display='2 - Rodamiento defectuoso' -> id=2
+2026-06-18 13:12:39 load_fallas_list: added display='4 - Sensor defectuoso' -> id=4
+2026-06-18 13:12:39 load_fallas_list: added display='12 - Sobrecalentamiento' -> id=12
+2026-06-18 13:12:39 load_fallas_list: added display='7 - Válvula dañada' -> id=7
+2026-06-18 13:12:39 load_fallas_list: added display='11 - Vibración excesiva' -> id=11
+2026-06-18 13:12:39 load_fallas_list: cargadas 15 fallas
+2026-06-18 13:12:39 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:39 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:39 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:39 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:39 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:39 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
+2026-06-18 13:12:39 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:39 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:39 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:39 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:39 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:39 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
+2026-06-18 13:12:39 table_has_column('USUARIOS', 'ID_TURNO'): True
+2026-06-18 13:12:39 table_has_column('ORDENES', 'ID_TURNO'): False
+2026-06-18 13:12:39 table_has_column('ORDENES', 'TURNO'): False
+2026-06-18 13:12:39 table_has_column('TURNOS', 'ID_TURNO'): True
+2026-06-18 13:12:39 load_work_orders: executing SQL:
+SELECT 
+                                COALESCE(o.ESTADO, 'N') as estado,
+                                o.ID_ORDEN as orden,
+                                o.FECHA_SOLICITUD as solicitud,
+                                COALESCE(u2.NOMBRE_USUARIO, '') as solicitante,
+                                COALESCE(tuo.NOMBRE_TURNO, '') as turno,
+                                COALESCE(CASE WHEN CHARINDEX(' - ', o.DESCRIPCION) > 0 THEN LEFT(o.DESCRIPCION, CHARINDEX(' - ', o.DESCRIPCION) - 1) ELSE LEFT(o.DESCRIPCION, 100) END, '') as titulo,
+                                COALESCE(d.NOMBRE_ROL, '') as depto,
+                            COALESCE(m.NOMBRE_MAQUINA, mf.NOMBRE_MAQUINA, '') as maquina,
+                            COALESCE(u2.ID_DEPARTAMENTO, '') as dept_usuario
+                            FROM ORDENES o
+                            LEFT JOIN DEPARTAMENTOS d ON o.ID_DEPARTAMENTO = d.ID_DEPARTAMENTO
+                            LEFT JOIN MAQUINAS m ON (o.ID_MAQUINA = m.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(o.ID_MAQUINA AS VARCHAR(10)), 3)) = m.ID_MAQUINA)
+                            LEFT JOIN (
+                                SELECT ID_ORDEN, MIN(ID_MAQUINA) AS ID_MAQUINA
+                                FROM ORDENES_FALLAS
+                                WHERE ID_MAQUINA IS NOT NULL AND LTRIM(RTRIM(ID_MAQUINA)) <> ''
+                                GROUP BY ID_ORDEN
+                            ) AS ofm ON ofm.ID_ORDEN = o.ID_ORDEN
+                            LEFT JOIN MAQUINAS mf ON (ofm.ID_MAQUINA = mf.ID_MAQUINA OR ('M' + RIGHT('000' + CAST(ofm.ID_MAQUINA AS VARCHAR(10)), 3)) = mf.ID_MAQUINA)
+                            LEFT JOIN USUARIOS u2 ON o.ID_USUARIO = u2.ID_USUARIO
+                            LEFT JOIN TURNOS tuo ON u2.ID_TURNO = tuo.ID_TURNO ORDER BY o.ID_ORDEN DESC
+PARAMS: []
+2026-06-18 13:12:39 load_work_orders: sample rows: [('P', 2, datetime.datetime(2026, 6, 18, 10, 16, 56, 267000), 'Ing. Carlos Administrador', 'Turno 1 (6:00-14:00)', '12', 'Almacén de Julios', 'Bomba Crudos 1', '0001')]
