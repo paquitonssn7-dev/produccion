@@ -27,6 +27,25 @@ import importlib
 from actualizador_github import integrar_actualizador_en_app
 from actualizador_github import ActualizadorGitHub
 VERSION_ACTUAL = "1.2.16"
+
+def build_initial_tab_loading_plan(is_admin, is_admin_department, can_view_principal_bitacora):
+    """Define qué pestañas se cargan de inmediato y cuáles se dejan para demanda."""
+    return {
+        "catalogos": {
+            "load_immediately": bool(is_admin),
+            "defer_to_tab": not bool(is_admin),
+        },
+        "seguridad": {
+            "load_immediately": bool(is_admin),
+            "defer_to_tab": not bool(is_admin),
+        },
+        "bitacora_principal": {
+            "load_immediately": bool(can_view_principal_bitacora or is_admin_department),
+            "defer_to_tab": not bool(can_view_principal_bitacora or is_admin_department),
+        },
+    }
+
+
 def locate_external_deps():
     try:
         if getattr(sys, 'frozen', False):
@@ -2539,19 +2558,8 @@ class LoginApp:
             return False
 
     def is_maintenance_or_systems(self):
-        """Retorna True si el usuario actual es admin, pertenece a mantenimiento o parece técnico (heurístico). También admin* logins."""
-        try:
-            if getattr(self, "is_admin", False):
-                return True
-            if getattr(self, "is_admin_login", False):
-                return True
-            if getattr(self, "current_nivel", 0) >= 4:
-                return True
-            dep = (getattr(self, "current_dep_name", "") or "").lower()
-            keywords = ("mantenimiento", "mecanic", "mecánico", "electri", "mecanico")
-            return any(k in dep for k in keywords)
-        except Exception:
-            return False
+        """Retorna True para todos los usuarios: el selector de turno está disponible para cualquier departamento."""
+        return True
     def user_has_permission(self, usuario_id, permission_name):
         """
         Verifica si el usuario tiene un permiso específico.
@@ -3719,7 +3727,13 @@ class LoginApp:
                             header_turno_var.set('Seleccionar')
                         except Exception:
                             pass
-                load_header_turnos()
+                def trigger_header_turnos_load():
+                    try:
+                        load_header_turnos()
+                    except Exception:
+                        pass
+
+                self.root.after(100, trigger_header_turnos_load)
         except Exception:
             pass
         logout_frame = tk.Frame(header_inner, bg="#ffffff", highlightthickness=0)
@@ -3781,6 +3795,23 @@ class LoginApp:
         )
         is_maintenance_tab = self.is_admin or ('mantenimiento' in user_dep_lower)
         is_systems_tab = self.is_admin or ('sistemas' in user_dep_lower)
+        tab_ordenes_grupo = tk.Frame(main_notebook, bg=self.bg)
+        main_notebook.add(tab_ordenes_grupo, text="📋 Órdenes")
+        notebook_ordenes = ttk.Notebook(tab_ordenes_grupo)
+        notebook_ordenes.pack(expand=True, fill="both", padx=4, pady=4)
+        tab_status = tk.Frame(notebook_ordenes, bg=self.bg)
+        notebook_ordenes.add(tab_status, text="Ordenes")
+        tab_ordenes = tab_status
+        tab_crear_orden = tk.Frame(notebook_ordenes, bg=self.bg)
+        notebook_ordenes.add(tab_crear_orden, text="Crear orden")
+        tab_herramientas = tk.Frame(notebook_ordenes, bg=self.bg)
+        tab_material = tk.Frame(notebook_ordenes, bg=self.bg)
+        self.new_orders_notification = {"active": False, "last_check": None}
+        self.notification_dot_visible = False
+        self.herramientas_dot_visible = False
+        self.material_dot_visible = False
+        self.herramientas_last_check = None
+        self.material_last_check = None
         tab_catalogos = tk.Frame(main_notebook, bg=self.bg)
         main_notebook.add(tab_catalogos, text="📚 Catalogos")
         notebook_catalogos = ttk.Notebook(tab_catalogos)
@@ -3788,7 +3819,6 @@ class LoginApp:
         tab_departamentos = tk.Frame(notebook_catalogos, bg=self.bg)
         notebook_catalogos.add(tab_departamentos, text="Departamentos")
         tab_fallas = tk.Frame(notebook_catalogos, bg=self.bg)
-        notebook_catalogos.add(tab_fallas, text="Fallas")
         left = tk.Frame(tab_fallas, bg=self.bg)
         left.pack(side="left", fill="both", expand=True, padx=(8,4), pady=8)
         # Panel derecho con detalles de la falla
@@ -4072,13 +4102,16 @@ class LoginApp:
             try:
                 selected_tab = notebook_catalogos.select()
                 if selected_tab == str(tab_fallas):
-                    load_fallas_catalogo()
+                    if not getattr(notebook_catalogos, "_fallas_loaded", False):
+                        notebook_catalogos._fallas_loaded = True
+                        load_fallas_catalogo()
                 elif selected_tab == str(tab_maquinas):
-                    load_maquinas_catalogo()
+                    if not getattr(notebook_catalogos, "_maquinas_loaded", False):
+                        notebook_catalogos._maquinas_loaded = True
+                        load_maquinas_catalogo()
             except Exception:
                 pass
         notebook_catalogos.bind('<<NotebookTabChanged>>', on_catalog_tab_changed)
-        load_fallas_catalogo()
         tab_maquinas = tk.Frame(notebook_catalogos, bg=self.bg)
         notebook_catalogos.add(tab_maquinas, text="Máquinas")
         left_m = tk.Frame(tab_maquinas, bg=self.bg)
@@ -4166,24 +4199,6 @@ class LoginApp:
             except Exception:
                 traceback.print_exc()
         tree_maquinas.bind('<<TreeviewSelect>>', on_select_maquina)
-        load_maquinas_catalogo()
-        tab_ordenes_grupo = tk.Frame(main_notebook, bg=self.bg)
-        main_notebook.add(tab_ordenes_grupo, text="📋 Órdenes")
-        notebook_ordenes = ttk.Notebook(tab_ordenes_grupo)
-        notebook_ordenes.pack(expand=True, fill="both", padx=4, pady=4)
-        tab_status = tk.Frame(notebook_ordenes, bg=self.bg)
-        notebook_ordenes.add(tab_status, text="Ordenes")
-        tab_ordenes = tab_status
-        tab_crear_orden = tk.Frame(notebook_ordenes, bg=self.bg)
-        notebook_ordenes.add(tab_crear_orden, text="Crear orden")
-        tab_herramientas = tk.Frame(notebook_ordenes, bg=self.bg)
-        tab_material = tk.Frame(notebook_ordenes, bg=self.bg)
-        self.new_orders_notification = {"active": False, "last_check": None}
-        self.notification_dot_visible = False
-        self.herramientas_dot_visible = False
-        self.material_dot_visible = False
-        self.herramientas_last_check = None
-        self.material_last_check = None
         tab_reportes_grupo = tk.Frame(main_notebook, bg=self.bg)
         main_notebook.add(tab_reportes_grupo, text="🗃️ Reportes")
         notebook_reportes = ttk.Notebook(tab_reportes_grupo)
@@ -4205,6 +4220,10 @@ class LoginApp:
         if self.is_admin or getattr(self, 'is_admin_login', False):
             tab_seguridad_grupo = tk.Frame(main_notebook, bg=self.bg)
             main_notebook.add(tab_seguridad_grupo, text="🔒 Seguridad")
+            try:
+                main_notebook.insert(main_notebook.index(tab_seguridad_grupo) + 1, tab_catalogos)
+            except Exception:
+                pass
             notebook_seguridad = ttk.Notebook(tab_seguridad_grupo)
             notebook_seguridad.pack(expand=True, fill="both", padx=4, pady=4)
             tab_usuarios = tk.Frame(notebook_seguridad, bg=self.bg)
@@ -4237,7 +4256,6 @@ class LoginApp:
                 ttk.Button(button_frame, text="❌ Eliminar Usuario", style="Action.TButton",
                           command=lambda: messagebox.showinfo("Info", "Función de eliminar usuario en desarrollo", parent=tab_usuarios)).pack(side="left", padx=4)
                 load_usuarios()
-            populate_tab_usuarios()
             tab_roles_permisos = tk.Frame(notebook_seguridad, bg=self.bg)
             notebook_seguridad.add(tab_roles_permisos, text="Roles y Permisos")
             def populate_tab_roles_permisos():
@@ -4452,7 +4470,6 @@ class LoginApp:
                 else:
                     tk.Label(btn_frame, text=f"Modo lectura - Solo administradores pueden editar permisos", 
                             bg=self.bg, fg="red", font=("Segoe UI", 10, "bold")).pack(side="left", padx=4)
-            populate_tab_roles_permisos()
             tab_bitacora = tk.Frame(notebook_seguridad, bg=self.bg)
             notebook_seguridad.add(tab_bitacora, text="Bitácora de Logins")
             bitacora_autorefresh_active = [True]
@@ -4657,7 +4674,40 @@ class LoginApp:
                     if bitacora_refresh_id[0] is not None:
                         tab_bitacora.after_cancel(bitacora_refresh_id[0])
                     bitacora_refresh_id[0] = tab_bitacora.after(20000, populate_tab_bitacora)
-            populate_tab_bitacora()
+            security_tab_loaded = {"usuarios": False, "roles": False, "bitacora": False}
+
+            def on_security_tab_changed(event=None):
+                try:
+                    selected_tab = notebook_seguridad.select()
+                    if selected_tab == str(tab_usuarios) and not security_tab_loaded["usuarios"]:
+                        security_tab_loaded["usuarios"] = True
+                        populate_tab_usuarios()
+                    elif selected_tab == str(tab_roles_permisos) and not security_tab_loaded["roles"]:
+                        security_tab_loaded["roles"] = True
+                        populate_tab_roles_permisos()
+                    elif selected_tab == str(tab_bitacora) and not security_tab_loaded["bitacora"]:
+                        security_tab_loaded["bitacora"] = True
+                        populate_tab_bitacora()
+                except Exception:
+                    pass
+
+            notebook_seguridad.bind('<<NotebookTabChanged>>', on_security_tab_changed)
+            if self.is_admin or getattr(self, 'is_admin_login', False):
+                security_tab_loaded["usuarios"] = True
+                security_tab_loaded["roles"] = True
+                security_tab_loaded["bitacora"] = True
+                try:
+                    populate_tab_usuarios()
+                except Exception:
+                    pass
+                try:
+                    populate_tab_roles_permisos()
+                except Exception:
+                    pass
+                try:
+                    populate_tab_bitacora()
+                except Exception:
+                    pass
         # Pestaña Bitácora a nivel principal (solo para departamentos permitidos)
         tab_bitacora_principal = None
         if can_view_principal_bitacora:
@@ -4680,7 +4730,7 @@ class LoginApp:
             # Texto "Próximamente" centrado
             tk.Label(center_frame, text="Próximamente", font=("Segoe UI", 48, "bold"), 
                     fg="#4a90e2", bg=self.bg).pack(expand=True)
-        populate_tab_bitacora_principal()
+        self.root.after(0, populate_tab_bitacora_principal)
         last_valid_tab = [0]
         def on_main_notebook_changed(event=None):
             """Verifica permisos cuando cambia de pestaña principal."""
@@ -8148,31 +8198,9 @@ ORDER BY [of].ID_ORDEN DESC, [of].ID_FALLA ASC
                 pass
         populate_tab_status()
         def create_test_users():
-            """Crea 3 usuarios de prueba por cada departamento con cargos diferentes."""
-            try:
-                deps = self.get_departments()
-                if not deps:
-                    return
-                cargos = ["Supervisor", "Jefe", "Coordinador"]
-                for dep_id, dep_nombre in deps:
-                    for i, cargo in enumerate(cargos, 1):
-                        nombre = f"{cargo} {dep_nombre}"
-                        login = f"{cargo.lower()}_{dep_id}_{i}"
-                        pwd = "123456"
-                        try:
-                            cfg = {"host": DB_SERVER, "user": DB_USER, "password": DB_PASSWORD, "database": DB_NAME}
-                            conn = mysql.connect(**cfg)
-                            cur = conn.cursor()
-                            cur.execute("SELECT COUNT(*) FROM usuarios WHERE usuario_login = %s", (login,))
-                            if cur.fetchone()[0] == 0:
-                                self.create_user_db(nombre, login, pwd, dep_id, "ACTIVO", cargo)
-                            cur.close()
-                            conn.close()
-                        except Exception:
-                            pass
-            except Exception:
-                pass
-        create_test_users()
+            """Función deshabilitada para evitar creación automática de usuarios."""
+            return
+        # create_test_users()
         def populate_tab_editar_usuario():
             """Listado en lado izquierdo + notebook de pestañas (Crear, Editar, Eliminar) en lado derecho."""
             if tab_editar_usuario is None:
@@ -8201,69 +8229,7 @@ ORDER BY [of].ID_ORDEN DESC, [of].ID_FALLA ASC
             scrollbar_tv.pack(side="right", fill="y")
             tv.configure(yscroll=scrollbar_tv.set)
             tv.pack(fill="both", expand=True, side="left")
-            sort_state_users = {"column": None, "reverse": False}
-            original_order = ["id", "nombre", "login", "depto", "estado"]
-            def reset_column_order():
-                tv.configure(displaycolumns=original_order)
-            def on_heading_click_users(col_name):
-                col_index = {"id": 0, "nombre": 1, "login": 2, "depto": 3, "estado": 4}
-                col_idx = col_index.get(col_name)
-                if col_idx == 2:
-                    try:
-                        load_fallas_list()
-                    except Exception:
-                        pass
-                    try:
-                        if not falla_map:
-                            log_debug('Advertencia: falla_map vacío al abrir editor de fallas')
-                    except Exception:
-                        pass
-                    editor_var = tk.StringVar(value=(initial_text if initial_text else ''))
-                    editor = ttk.Combobox(falla_tree.master, textvariable=editor_var, state="normal", font=input_font)
-                    try:
-                        vals = sorted(falla_map.keys())
-                        vals = [v for v in vals if v and str(v).strip()]
-                        editor['values'] = vals
-                    except Exception:
-                        try:
-                            editor['values'] = [v for v in list(falla_map.keys()) if v and str(v).strip()]
-                        except Exception:
-                            editor['values'] = []
-                    try:
-                        editor_var.set('')
-                        editor.set('')
-                    except Exception:
-                        pass
-                    editor.place(x=abs_x, y=abs_y, width=width, height=height)
-                    editor.focus()
-                    editor.select_range(0, 'end')
-                    try:
-                        editor.event_generate('<Down>')
-                    except Exception:
-                        pass
-                    try:
-                        vals_now = editor['values'] if 'values' in editor.keys() else []
-                        if not vals_now:
-                            try:
-                                messagebox.showinfo('Fallas', 'No hay fallas disponibles para seleccionar. Puedes crear una nueva o revisar la conexión a la base de datos.', parent=falla_tree.master)
-                            except Exception:
-                                log_debug('Aviso: no hay fallas disponibles al abrir editor de fallas')
-                    except Exception:
-                        pass
-                if 0 <= col_index < len(col_names):
-                    on_heading_click_users(col_names[col_index])
-                reset_column_order()
-            def header_click_handler_users(event):
-                if tv.identify_region(event.x, event.y) != "heading":
-                    return
-                col = tv.identify_column(event.x)
-                col_index = int(col.replace("#", "")) - 1
-                col_names = ["id", "nombre", "login", "depto", "estado"]
-                if 0 <= col_index < len(col_names):
-                    on_heading_click_users(col_names[col_index])
-                reset_column_order()
-            tv.bind("<Button-1>", header_click_handler_users)
-            tv.bind("<Configure>", lambda e: reset_column_order())
+            make_treeview_sortable(tv)
             deps = self.get_departments()
             dep_by_name = {r[1]: r[0] for r in deps}
             name_by_id = {r[0]: r[1] for r in deps}
@@ -8631,6 +8597,7 @@ ORDER BY [of].ID_ORDEN DESC, [of].ID_FALLA ASC
                     cfg = {"host": DB_SERVER, "user": DB_USER, "password": DB_PASSWORD, "database": DB_NAME}
                     conn = mysql.connect(**cfg)
                     cur = conn.cursor()
+                    cur.execute("DELETE FROM LOGS WHERE ID_USUARIO = %s", (eliminar_id[0],))
                     cur.execute("DELETE FROM usuarios WHERE id_usuario=%s", (eliminar_id[0],))
                     conn.commit()
                     cur.close()
@@ -16735,7 +16702,16 @@ ORDER BY [of].ID_ORDEN DESC, [of].ID_FALLA ASC
                             conn_str = f"DRIVER={DB_DRIVER};SERVER={DB_SERVER};DATABASE={DB_NAME};UID={DB_USER};PWD={DB_PASSWORD};"
                             conn = pyodbc.connect(conn_str)
                             cur = conn.cursor()
-                            cur.execute("SELECT id_usuario, nombre_usuario FROM usuarios WHERE cargo IN ('Jefe', 'Supervisor', 'Director', 'Subdirector') ORDER BY nombre_usuario")
+                            cur.execute(
+                                """
+                                SELECT u.id_usuario, u.nombre_usuario
+                                FROM usuarios u
+                                LEFT JOIN departamentos d ON u.id_departamento = d.id_departamento
+                                WHERE u.cargo IN ('Jefe', 'Supervisor', 'Director', 'Subdirector')
+                                  AND LOWER(COALESCE(d.nombre_rol, '')) IN ('mantenimiento electrico', 'mantenimiento mecanico', 'mantenimiento general')
+                                ORDER BY u.nombre_usuario
+                                """
+                            )
                             jefes_supervisores = cur.fetchall()
                             cur.close(); conn.close()
                         except Exception:
@@ -21316,6 +21292,7 @@ Todos los datos se recargarán al reabrir la orden."""
             lb_users.column("usuario", width=120, anchor="w")
             lb_users.column("departamento", width=130, anchor="w")
             lb_users.column("estado", width=80, anchor="center")
+            make_treeview_sortable(lb_users)
             lb_users.pack(side="left", fill="both", expand=True, padx=(2,0), pady=2)
             cfg = {"host": DB_SERVER, "user": DB_USER, "password": DB_PASSWORD, "database": DB_NAME}
             try:
@@ -23212,6 +23189,9 @@ Todos los datos se recargarán al reabrir la orden."""
                     id_departamento_to_insert = id_departamento
                 columns = ["ID_USUARIO", "nombre_usuario", "usuario_login", "password_hash", "id_departamento", "estado", "cargo"]
                 values = [user_id, nombre, login, pwd, id_departamento_to_insert, estado, cargo]
+                if self.table_has_column('usuarios', 'FECHA_CREACION') or self.table_has_column('usuarios', 'fecha_creacion'):
+                    columns.append("fecha_creacion")
+                    values.append(datetime.now())
                 if self.table_has_column('usuarios', 'ID_TURNO'):
                     columns.append("ID_TURNO")
                     values.append(id_turno)
@@ -24626,6 +24606,7 @@ Todos los datos se recargarán al reabrir la orden."""
             try:
                 conn = mysql.connect(**cfg)
                 cur = conn.cursor()
+                cur.execute("DELETE FROM LOGS WHERE ID_USUARIO = %s", (user_id,))
                 cur.execute("DELETE FROM usuarios WHERE id_usuario = %s", (user_id,))
                 self.log_action(self.current_user_id, f"Eliminar usuario: {info_login_var.get()} (ID {user_id})")
                 conn.commit()
