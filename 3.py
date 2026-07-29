@@ -4689,7 +4689,7 @@ class LoginApp:
                         security_tab_loaded["bitacora"] = True
                         populate_tab_bitacora()
                 except Exception:
-                    pass
+                    pass 
 
             notebook_seguridad.bind('<<NotebookTabChanged>>', on_security_tab_changed)
             if self.is_admin or getattr(self, 'is_admin_login', False):
