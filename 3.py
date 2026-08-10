@@ -26,7 +26,7 @@ import socket
 import importlib
 from actualizador_github import integrar_actualizador_en_app
 from actualizador_github import ActualizadorGitHub
-VERSION_ACTUAL = "1.2.16"
+VERSION_ACTUAL = "1.2.18"
 
 def build_initial_tab_loading_plan(is_admin, is_admin_department, can_view_principal_bitacora):
     """Define qué pestañas se cargan de inmediato y cuáles se dejan para demanda."""
@@ -2557,9 +2557,31 @@ class LoginApp:
             log_debug(traceback.format_exc())
             return False
 
-    def is_maintenance_or_systems(self):
-        """Retorna True para todos los usuarios: el selector de turno está disponible para cualquier departamento."""
+    def can_view_all_orders(self):
+        """Retorna True solo para administracion/mantenimiento, que son los únicos con acceso global a órdenes."""
+        try:
+            if getattr(self, 'is_admin', False):
+                return True
+            if getattr(self, 'is_admin_login', False):
+                return True
+            level = getattr(self, 'current_nivel', None)
+            try:
+                if level is not None and int(level) >= 4:
+                    return True
+            except Exception:
+                pass
+            dep_name = (getattr(self, 'current_dep_name', '') or '').strip().lower()
+            return any(token in dep_name for token in ('mantenimiento', 'administracion'))
+        except Exception:
+            return False
+
+    def can_view_turno_selector(self):
+        """El selector de turno debe ser visible para todos los departamentos."""
         return True
+
+    def is_maintenance_or_systems(self):
+        """Compatibilidad histórica: alias al nuevo criterio de órdenes globales."""
+        return self.can_view_all_orders()
     def user_has_permission(self, usuario_id, permission_name):
         """
         Verifica si el usuario tiene un permiso específico.
@@ -3638,7 +3660,7 @@ class LoginApp:
                 font=("Segoe UI", 11)).pack(side="left", padx=12, pady=8)
         # Mostrar selector de turno en la barra superior para personal de mantenimiento/sistemas
         try:
-            if self.is_maintenance_or_systems():
+            if self.can_view_turno_selector():
                 turno_frame = tk.Frame(user_info_frame, bg="#ffffff", highlightthickness=0)
                 turno_frame.pack(side='left', padx=(6,0), pady=8)
                 
@@ -6841,8 +6863,10 @@ ORDER BY [of].ID_ORDEN DESC, [of].ID_FALLA ASC
                     params = []
                     is_maint_local = self.is_maintenance_or_systems()
                     if not is_maint_local:
-                        base_sql += " AND s.ID_USUARIO = %s"
-                        params = [self.current_user_id]
+                        # Política de negocio: usuarios no administrativos ven solo las órdenes
+                        # del departamento activo, no las órdenes creadas por el mismo usuario.
+                        base_sql += " AND s.ID_DEPARTAMENTO = %s"
+                        params = [self.current_dep_id]
                     if filtro_estado and filtro_estado != 'todas' and has_estado:
                         if filtro_estado.lower() == 'p':
                             base_sql += " AND (LOWER(COALESCE(s.ESTADO,'P')) = %s OR LOWER(COALESCE(s.ESTADO,'P')) = 'N')"
@@ -15012,10 +15036,11 @@ ORDER BY [of].ID_ORDEN DESC, [of].ID_FALLA ASC
                         params = []
                         where_conditions = []
                         is_supervisor = self.is_maintenance_or_systems()
-                        current_user_id = getattr(self, 'current_user_id', None)
+                        current_dep_id = getattr(self, 'current_dep_id', None)
                         if not is_supervisor:
-                            where_conditions.append("o.ID_USUARIO = %s")
-                            params.append(current_user_id)
+                            # Política de negocio: usuarios normales ven solo las órdenes del departamento activo.
+                            where_conditions.append("o.ID_DEPARTAMENTO = %s")
+                            params.append(current_dep_id)
                         if filtro_estado and filtro_estado.lower() != 'todas':
                             where_conditions.append("LOWER(COALESCE(o.ESTADO, 'N')) = %s")
                             params.append(filtro_estado.lower())
